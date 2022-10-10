@@ -7,6 +7,11 @@ function writeToFile($fileName, $content) {
     fclose($f);
 }
 
+/*
+ * 1. reads a translation file,
+ * 2. alphabetically sorts (A-Z) the translations and
+ * 3. returns string that contains a sorted list of all translations (including comments either single line or mult-line).
+ */
 function sortTranslations($fileName) {
     $translations = array();    // associative: translation key value pair
     $comments = array();        // associative: hold all comments as an array against the key 
